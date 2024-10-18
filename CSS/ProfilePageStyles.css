@@ -6,6 +6,7 @@
 }
 
 body {
+    overflow: hidden;
     color: white;
     background-color: black;
 }
@@ -13,10 +14,10 @@ body {
 /* Remove the screen width */
 @media screen and (max-width: 375px) {
     body {
+        overflow: hidden;
         margin: none;
         padding: none;
         background-color: black;
-        padding-bottom: -20px !important;
     }
 
     body * {
