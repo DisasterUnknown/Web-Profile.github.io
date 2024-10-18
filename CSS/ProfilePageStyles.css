@@ -1,7 +1,7 @@
 :root {
-    --border_color: rgb(48, 15, 15);
+    --border_color: rgb(90, 21, 21);
     --tab_Background_Color: rgba(0, 0, 0, 0.92);
-    --redGlow_Effect: 0 0 10px rgba(48, 15, 15, 0.7), 0 0 20px rgba(48, 15, 15, 0.5);
+    --redGlow_Effect: 0 0 10px rgba(80, 15, 15, 0.7), 0 0 20px rgba(80, 15, 15, 0.5);
     --whiteGlow-Effect: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
