@@ -28,7 +28,7 @@ body {
 
     /* Main Banner styling */
     #profileBanner {
-        height: 35%;
+        height: 220px;
         padding: 0px;
         /* background-color: red; */
 
@@ -50,24 +50,41 @@ body {
         }
 
         .profileText {
-            width: 65%;
-
             position: relative;
             z-index: 5;
-            bottom: 100px;
-            left: 100px;
-            /* background-color: red; */
+            bottom: 235px;
+
+            height: 100%;
+            width: 100%;
+            /* background-color: rgb(235, 13, 13, 0.2); */
         
             h2 {
+                position: relative;
+                top: 135px;
+                left: 98px;
+
                 margin-bottom: 0px;    
                 font-size: 20px;
             }
 
-            p {
+            #aka {
+                position: relative;
+                top: 135px;
+                left: 98px;
+
                 color: gray;
                 margin-top: 0px;
                 margin-left: 2px;
                 font-size: 10px;
+            }
+
+            #bio {
+                position: relative;
+                top: 151px;
+
+                text-align: center;
+                color: white;
+                font-size: 12px;
             }
         }
         
