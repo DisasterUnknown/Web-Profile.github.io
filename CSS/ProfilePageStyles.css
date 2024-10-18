@@ -89,6 +89,7 @@ body {
             display: grid;
             grid-template-columns: repeat(2, 50%);
             grid-template-rows: repeat(2, 50%);
+            background-color: rgba(0, 0, 0, 0);
 
             section {
                 margin: 4%;
@@ -96,6 +97,7 @@ body {
                 border: 3px solid transparent;
                 border-color: var(--border_color);
                 box-shadow: var(--glow_Effect);
+                background-color: var(--tab_Background_Color);
             }
         }
     }
