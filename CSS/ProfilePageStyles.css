@@ -24,8 +24,8 @@ body {
 /* Mobile Screen Styling */
 @media screen and (max-width:500px) {
     .mainBody {
-        margin: 10vh 1vh 10vh 1vh;
-        height: 80vh;
+        margin: 5vh 1vh 5vh 1vh;
+        height: 90vh;
         /* background-color: red; */
 
         fieldset {
