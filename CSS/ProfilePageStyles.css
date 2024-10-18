@@ -16,7 +16,6 @@ body {
 /* Remove the screen width */
 @media screen and (max-width: 375px) {
     body {
-        overflow: hidden;
         height: 100vh;
         margin: 0;
         padding: none;
