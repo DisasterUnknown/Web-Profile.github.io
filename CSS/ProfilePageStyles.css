@@ -7,6 +7,8 @@
 
 body {
     overflow: hidden;
+    height: 100vh;
+    margin: 0;
     color: white;
     background-color: black;
 }
@@ -15,7 +17,8 @@ body {
 @media screen and (max-width: 375px) {
     body {
         overflow: hidden;
-        margin: none;
+        height: 100vh;
+        margin: 0;
         padding: none;
         background-color: black;
     }
@@ -28,6 +31,7 @@ body {
 /* Mobile Screen Styling */
 @media screen and (max-width:500px) {
     .mainBody {
+        overflow: hidden;
         margin: 5vh 1vh 5vh 1vh;
         height: 90vh;
         /* background-color: red; */
@@ -142,7 +146,7 @@ body {
 
     /* Sub Tabs styling */
     .subTabs {
-        height: 60%;
+        height: 55%;
         display: grid;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(2, 50%);
