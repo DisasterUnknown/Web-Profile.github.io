@@ -29,7 +29,7 @@ body {
     /* Main Banner styling */
     #profileBanner {
         height: 35%;
-        padding: 0%;
+        padding: 0px;
         /* background-color: red; */
 
         #pBanner {
@@ -40,8 +40,8 @@ body {
 
         #pPicture {
             position: relative;
-            bottom: 18%;
-            left: 3%;
+            bottom: 25px;
+            left: 15px;
 
             width: 70px;
             height: auto;
@@ -59,13 +59,13 @@ body {
             /* background-color: red; */
         
             h2 {
-                margin-bottom: 0%;    
+                margin-bottom: 0px;    
                 font-size: 20px;
             }
 
             p {
                 color: gray;
-                margin-top: 0%;
+                margin-top: 0px;
                 margin-left: 2px;
                 font-size: 10px;
             }
@@ -85,7 +85,7 @@ body {
         .gameTabs {
             border: none;
             box-shadow: none;
-            padding: 0%;
+            padding: 0px;
             display: grid;
             grid-template-columns: repeat(2, 50%);
             grid-template-rows: repeat(2, 50%);
