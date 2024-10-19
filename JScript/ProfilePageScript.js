@@ -11,8 +11,8 @@ document.getElementById('age').textContent = age;
 const vBtn = document.getElementById('volumeBtn');
 const music = document.getElementById('music');
 
-const volume = 'Resources/volume.png';
-const mute = 'Resources/mute.png';
+const volume = 'Resources/MainBanner/volume.png';
+const mute = 'Resources/MainBanner/mute.png';
 
 vBtn.addEventListener('click', () => {
     // Creating the music mute btn
