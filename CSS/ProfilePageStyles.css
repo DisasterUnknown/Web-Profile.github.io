@@ -169,6 +169,21 @@ body {
         grid-template-rows: repeat(2, 50%);
         /* background-color: pink; */
 
+        .subTabCss {
+            align-items: center;
+
+            p {
+                margin: 0;
+                margin-bottom: 10% !important;
+                text-align: center;
+            }
+
+            div {
+                height: 70%;
+                border: 1px solid white;
+            }
+        }
+
         /* Game Tabs Styling */
         .gameTabs {
             border: none;
@@ -178,7 +193,7 @@ body {
             grid-template-columns: repeat(2, 50%);
             grid-template-rows: repeat(2, 50%);
             background-color: rgba(0, 0, 0, 0);
-
+            
             section {
                 margin: 4%;
                 border-radius: 8px;
