@@ -46,7 +46,7 @@ function changeNumber(num) {
 
     if (num1 == '2' && num2 == '0' && num3 == '0' && num4 == '6') {
         console.log("world");
-        
+        window.alert("Your device has been Hacked!!");
     }
 }
 
