@@ -31,8 +31,30 @@ body {
     }
 }
 
-/* Remove the screen width */
-@media screen and (max-width: 375px) {
+/* Pc bigger screen size */
+@media screen and (min-width: 500px) {
+    .mainBody {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    #profileBanner {
+        margin-top: 6vh;
+    }
+}
+
+
+/* Mobile Screen Styling */
+/* Removing the left and right  */
+@media screen and (max-width: 900px) {
+    .mainBody {
+        width: 350px !important;
+        margin: 0 auto;
+    }
+}
+
+/* Removing the year number boxes */
+@media screen and (max-width: 340px) {
     body {
         height: 100vh;
         margin: 0;
@@ -41,229 +63,243 @@ body {
         background-color: black;
     }
 
+    .yearClick * {
+        display: none;
+    }
+}
+
+/* Removing the entire page  */
+@media screen and (max-width: 320px) {
     body * {
         display: none;
     }
 }
 
-/* Mobile Screen Styling */
-@media screen and (max-width:500px) {
-    .mainBody {
-        padding: 5vh 1vh 5vh 1vh;
-        height: 90vh;
-        /* background-color: red; */
+/* ---------------------------------------------------------------------------------------- */
+/* Full screen styling */
+.mainBody {
+    padding: 5vh 1vh 5vh 1vh;
+    height: 90vh;
+    /* background-color: red; */
 
-        fieldset {
-            margin: 2vh;
-            border: 3px solid transparent;
-            border-radius: 15px;
-            border-color: var(--border_color);
-            background-color: var(--tab_Background_Color);
-            box-shadow: var(--redGlow_Effect);
-        }
+    fieldset {
+        margin: 2vh;
+        border: 3px solid transparent;
+        border-radius: 15px;
+        border-color: var(--border_color);
+        background-color: var(--tab_Background_Color);
+        box-shadow: var(--redGlow_Effect);
+    }
+}
+
+/* Main Banner styling */
+#profileBanner {
+    height: 220px;
+    padding: 0px;
+    /* background-color: red; */
+
+    #pBanner {
+        width: 100%;
+        height: 60%;
+        border-radius: 12px 12px 0px 0px;
     }
 
-    /* Main Banner styling */
-    #profileBanner {
-        height: 220px;
-        padding: 0px;
-        /* background-color: red; */
+    #pPicture {
+        position: relative;
+        bottom: 25px;
+        left: 9px;
 
-        #pBanner {
-            width: 100%;
-            height: 60%;
-            border-radius: 12px 12px 0px 0px;
+        width: 70px;
+        height: auto;
+        border: 5px solid black;
+        border-radius: 50%;
+    }
+
+    /* Profile text styling */
+    .profileText {
+        position: relative;
+        z-index: 5;
+        bottom: 235px;
+
+        height: 100%;
+        width: 100%;
+        /* background-color: rgb(235, 13, 13, 0.2); */
+
+        h2 {
+            position: relative;
+            top: 135px;
+            left: 98px;
+
+            width: 200px;
+            margin-bottom: 0px;
+            font-size: 20px;
         }
 
-        #pPicture {
+        #aka {
             position: relative;
-            bottom: 25px;
-            left: 9px;
+            top: 135px;
+            left: 98px;
 
-            width: 70px;
-            height: auto;
-            border: 5px solid black;
+            width: 200px;
+            color: gray;
+            margin-top: 0px;
+            margin-left: 2px;
+            font-size: 10px;
+        }
+
+        #bio {
+            position: relative;
+            top: 151px;
+
+            text-align: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        #volumeBtn {
+            position: relative;
+            float: right;
+            right: 5px;
+            bottom: 68px;
+
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
+            background-color: rgb(0, 0, 0, 0.5);
         }
 
-        /* Profile test styling */
-        .profileText {
+        .yearClick {
             position: relative;
-            z-index: 5;
-            bottom: 235px;
+            float: right;
+            right: -20px;
+            top: 65px;
 
-            height: 100%;
-            width: 100%;
-            /* background-color: rgb(235, 13, 13, 0.2); */
-
-            h2 {
-                position: relative;
-                top: 135px;
-                left: 98px;
-
-                width: 200px;
-                margin-bottom: 0px;
-                font-size: 20px;
-            }
-
-            #aka {
-                position: relative;
-                top: 135px;
-                left: 98px;
-
-                width: 200px;
-                color: gray;
-                margin-top: 0px;
-                margin-left: 2px;
-                font-size: 10px;
-            }
-
-            #bio {
-                position: relative;
-                top: 151px;
-
-                text-align: center;
-                color: white;
-                font-size: 12px;
-            }
-
-            #volumeBtn {
-                position: relative;
-                float: right;
-                right: 5px;
-                bottom: 68px;
-
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background-color: rgb(0, 0, 0, 0.5);
-            }
-
-            .yearClick {
-                position: relative;
-                float: right;
-                right: -20px;
-                top: 65px;
-
-                display: grid;
-                grid-template-columns: repeat(4, 25px);
-
-                p {
-                    width: 20px;
-                    height: 20px;
-                    text-align: center;
-                    box-shadow: var(--whiteGlow-Effect);
-                    margin: 2px;
-                    border-radius: 2px;
-                    border: 1px solid white;
-                }
-            }
-        }
-
-    }
-
-    /* Sub Tabs styling */
-    .subTabs {
-        height: 55%;
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(2, 50%);
-        /* background-color: pink; */
-
-        .subTabCss {
-            align-items: center;
-            transform: translate(0, 0);
+            display: grid;
+            grid-template-columns: repeat(4, 25px);
 
             p {
-                margin: 0;
-                margin-bottom: 10% !important;
+                width: 20px;
+                height: 20px;
                 text-align: center;
+                box-shadow: var(--whiteGlow-Effect);
+                margin: 2px;
+                border-radius: 2px;
+                border: 1px solid white;
             }
+        }
+    }
 
-            /* Slide show styling */
-            .slidShow {
-                height: 70%;
+}
+
+/* Sub Tabs styling */
+.subTabs {
+    height: 55%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    /* background-color: pink; */
+
+    .subTabCss {
+        align-items: center;
+        transform: translate(0, 0);
+
+        p {
+            margin: 0;
+            margin-bottom: 10% !important;
+            text-align: center;
+        }
+
+        /* Slide show styling */
+        .slidShow {
+            height: 70%;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            transform: translate(0, 0);
+            /* border: 1px solid white; */
+
+            div {
                 width: 100%;
-                overflow: hidden;
-                text-align: center;
-                transform: translate(0, 0);
+                height: 100%;
+                margin: 0;
+                padding: 0;
                 /* border: 1px solid white; */
 
-                div {
-                    width: 100%;
+                a {
+                    width: 90%;
                     height: 100%;
-                    margin: 0;
-                    padding: 0;
-                    /* border: 1px solid white; */
+                    display: inline-block;
 
-                    a {
-                        width: 90%;
+                    img {
                         height: 100%;
-                        display: inline-block;
-
-                        img {
-                            height: 100%;
-                            width: 55%;
-                            margin-bottom: -3%;
-                        }
+                        width: calc(100% / 2);
+                        margin-bottom: -3%;
                     }
                 }
             }
-
-            #mangaShow {
-                animation: slide 20s infinite;
-            }
         }
 
-        /* Game Tabs Styling */
-        .gameTabs {
-            border: none;
-            box-shadow: none;
-            padding: 0px;
-            display: grid;
-            grid-template-columns: repeat(2, 50%);
-            grid-template-rows: repeat(2, 50%);
-            background-color: rgba(0, 0, 0, 0);
-
-            section {
-                margin: 4%;
-                border-radius: 8px;
-                border: 3px solid transparent;
-                border-color: var(--border_color);
-                box-shadow: var(--redGlow_Effect);
-                background-color: var(--tab_Background_Color);
-            }
+        #mangaShow {
+            animation: slide 20s infinite;
         }
     }
 
-    /* transictions for the manga slid show */
-    @keyframes slide {
-        0% {
-            transform: translateY(0);
+    /* Game Tabs Styling */
+    .gameTabs {
+        border: none;
+        box-shadow: none;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+        background-color: rgba(0, 0, 0, 0);
+
+        section {
+            margin: 4%;
+            border-radius: 8px;
+            border: 3px solid transparent;
+            border-color: var(--border_color);
+            box-shadow: var(--redGlow_Effect);
+            background-color: var(--tab_Background_Color);
         }
-        10% {
-            transform: translateY(-100%);
-        }
-        20% {
-            transform: translateY(-200%);
-        }
-        30% {
-            transform: translateY(-300%);
-        }
-        40% {
-            transform: translateY(-400%);
-        }
-        50% {
-            transform: translateY(-500%);
-        }
-        60% {
-            transform: translateY(-600%);
-        }
-        70% {
-            transform: translateY(-700%);
-        }
-        80% {
-            transform: translateY(-800%);
-        }
+    }
+}
+
+/* transictions for the manga slid show */
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(-100%);
+    }
+
+    20% {
+        transform: translateY(-200%);
+    }
+
+    30% {
+        transform: translateY(-300%);
+    }
+
+    40% {
+        transform: translateY(-400%);
+    }
+
+    50% {
+        transform: translateY(-500%);
+    }
+
+    60% {
+        transform: translateY(-600%);
+    }
+
+    70% {
+        transform: translateY(-700%);
+    }
+
+    80% {
+        transform: translateY(-800%);
     }
 }
