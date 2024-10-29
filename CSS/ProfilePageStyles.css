@@ -246,6 +246,10 @@ body {
         #animeShow {
             animation: animeSlide 30s infinite;
         }
+
+        #gameShow {
+            animation: gameSlide 30s infinite;
+        }
     }
 
     /* Game Tabs Styling */
@@ -351,3 +355,32 @@ body {
     }
 }
 
+@keyframes gameSlide {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(-100%);
+    }
+
+    20% {
+        transform: translateY(-203%);
+    }
+
+    30% {
+        transform: translateY(-300%);
+    }
+
+    40% {
+        transform: translateY(-403%);
+    }
+
+    50% {
+        transform: translateY(-503%);
+    }
+
+    60% {
+        transform: translateY(-603%);
+    }
+}
