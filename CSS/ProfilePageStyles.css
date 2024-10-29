@@ -240,7 +240,11 @@ body {
         }
 
         #mangaShow {
-            animation: slide 20s infinite;
+            animation: mangaSlide 30s infinite;
+        }
+
+        #animeShow {
+            animation: animeSlide 30s infinite;
         }
     }
 
@@ -266,7 +270,7 @@ body {
 }
 
 /* transictions for the manga slid show */
-@keyframes slide {
+@keyframes mangaSlide {
     0% {
         transform: translateY(0);
     }
@@ -303,3 +307,47 @@ body {
         transform: translateY(-800%);
     }
 }
+
+
+@keyframes animeSlide {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(-100%);
+    }
+
+    20% {
+        transform: translateY(-203%);
+    }
+
+    30% {
+        transform: translateY(-303%);
+    }
+
+    40% {
+        transform: translateY(-403%);
+    }
+
+    50% {
+        transform: translateY(-503%);
+    }
+
+    60% {
+        transform: translateY(-603%);
+    }
+
+    70% {
+        transform: translateY(-703%);
+    }
+
+    80% {
+        transform: translateY(-803%);
+    }
+
+    90% {
+        transform: translateY(-905%);
+    }
+}
+
