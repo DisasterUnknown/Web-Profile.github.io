@@ -269,6 +269,12 @@ body {
             border-color: var(--border_color);
             box-shadow: var(--redGlow_Effect);
             background-color: var(--tab_Background_Color);
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
