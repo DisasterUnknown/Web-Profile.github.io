@@ -31,6 +31,42 @@ body {
     }
 }
 
+
+/* Selecting panned for the game type */
+.selectOption {
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 15%;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(2, auto);
+    text-align: center;
+    
+    section {
+        margin: 20px;
+        border: 3px solid;
+        border-radius: 50%;
+        border-color: var(--border_color);
+        box-shadow: var(--redGlow_Effect);
+        background-color: var(--tab_Background_Color);
+
+        p {
+            font-size: clamp(1rem, 1.5vw + 1rem, 2rem);
+            font-weight: bold;
+        }
+    }
+
+    section:hover {
+        background-color: rgb(76, 0, 0);
+    }
+}
+
+
+/* Game block and template styling */
+.xox_Game {
+    display: none;
+}
+
 .bloxs {
     width: 390px;
     height: auto;
@@ -59,9 +95,37 @@ body {
         text-align: center;
         font-size: 93px;
     }
+
+    p:hover {
+        background-color: #400000;
+    }
 }
 
+
+
+
+/* Screen sizing */
+@media screen and (max-width: 1300px) {
+    .selectOption {
+        width: 90%;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
+    .selectOption {
+        width: 90%;
+        padding-top: 40%;
+
+        section {
+            border-radius: 10px;
+
+            p {
+
+            }
+        }
+    }
+
     .bloxs {
         width: 240px;
         margin: 0 auto;

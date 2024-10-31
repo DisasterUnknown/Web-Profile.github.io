@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/xoxStyling.css">
     <title>XOX</title>
 </head>
-<body>
-    <div><h1><center>XOX Game (Coming Soon!!)</center></h1></div>
 
-    <div class="bloxs">
-        <p id="B1"> </p>
-        <p id="B2"> </p>
-        <p id="B3"> </p>
-        <p id="B4"> </p>
-        <p id="B5"> </p>
-        <p id="B6"> </p>
-        <p id="B7"> </p>
-        <p id="B8"> </p>
-        <p id="B9"> </p>
+<body>
+    <!-- Selecting the game type -->
+    <div class="selectOption" style="display: none;">
+        <section id="opp1">
+            <p>Traditional Tick-Tack-Toe with 3&nbsp;matches.</p>
+        </section>
+
+        <section id="opp2">
+            <p>Block replacing Tick-Tack-Toe every 6 rounds.</p>
+        </section>
     </div>
+
+    <!-- Game cntent area -->
+    <div class="xox_Game">
+        <div>
+            <h1>
+                <center>XOX Game (Coming Soon!!)</center>
+            </h1>
+        </div>
+
+        <div class="bloxs">
+            <p id="B1"> </p>
+            <p id="B2"> </p>
+            <p id="B3"> </p>
+            <p id="B4"> </p>
+            <p id="B5"> </p>
+            <p id="B6"> </p>
+            <p id="B7"> </p>
+            <p id="B8"> </p>
+            <p id="B9"> </p>
+        </div>
+    </div>
+
+    <!-- Game over display tabe -->
+     <div class="gameOver">
+        
+     </div>
+
+    <script src="../JScript/GameScript.js"></script>
 </body>
+
 </html>
