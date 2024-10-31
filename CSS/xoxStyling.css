@@ -31,6 +31,15 @@ body {
     }
 }
 
+/* Content center align content */
+.centerAlign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
 
 /* Selecting panned for the game type */
 .selectOption {
@@ -55,10 +64,11 @@ body {
         background-color: #2a0000;
     }
 
+    
+
     .Btns {
         width: 40%;
         margin: 0 auto;
-        padding-top: 10%;
         display: grid;
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(2, auto);
@@ -96,7 +106,7 @@ body {
     height: auto;
     align-items: center;
     margin: 0 auto;
-    margin-top: 9%;
+    margin-top: 5%;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -128,8 +138,6 @@ body {
 
 /* GameOver Screen styling */
 .gameOver {
-    padding-top: 6%;
-
     h1 {
         font-size: clamp(1rem, 1.5vw + 1rem, 3rem);
         text-align: center;
@@ -161,7 +169,7 @@ body {
     section {
         width: 50%;
         margin: 0 auto;
-        margin-top: 80px !important;
+        margin-top: 10% !important;
         text-align: center;
         font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
         border: 2px solid;
@@ -178,26 +186,21 @@ body {
 
 /* Screen sizing */
 @media screen and (max-width: 1300px) {
-    .selectOption {
-        .Btns {
-            width: 90%;
-        }
+    .Btns {
+        width: 90% !important;
     }
 }
 
 
 @media screen and (max-width: 600px) {
-    .selectOption {
-        .Btns {
-            width: 90%;
-            padding-top: 30%;
+    .Btns {
+        width: 90% !important;
 
-            section {
-                border-radius: 10px;
+        section {
+            border-radius: 10px !important;
 
-                p {
-                    padding: 5px;
-                }
+            p {
+                padding: 5px !important;
             }
         }
     }
