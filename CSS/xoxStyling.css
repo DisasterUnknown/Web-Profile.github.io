@@ -102,6 +102,54 @@ body {
 }
 
 
+/* GameOver Screen styling */
+.gameOver {
+    padding-top: 6%;
+
+    h1 {
+        font-size: clamp(1rem, 1.5vw + 1rem, 3rem);
+        text-align: center;
+    }
+
+    table {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 5% !important;
+        text-align: center;
+        font-size: clamp(1rem, 1.5vw + 1rem, 2rem);
+
+        td {
+            width: 20%;
+            border: 3px solid;
+            border-radius: 5px;
+            border-color: var(--border_color);
+            box-shadow: var(--redGlow_Effect);
+            background-color: var(--tab_Background_Color);
+        }
+    }
+
+    h2 {
+        margin-top: 50px;
+        text-align: center;
+        font-size: clamp(1rem, 1.5vw + 1rem, 2rem);
+    }
+
+    section {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 80px !important;
+        text-align: center;
+        font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+        border: 2px solid;
+        border-color: var(--border_color);
+        box-shadow: var(--redGlow_Effect);
+        background-color: #2a0000;
+    }
+
+    section:hover {
+        background-color: #400000;
+    }
+}
 
 
 /* Screen sizing */

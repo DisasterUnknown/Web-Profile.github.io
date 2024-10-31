@@ -10,7 +10,7 @@
 
 <body>
     <!-- Selecting the game type -->
-    <div class="selectOption" style="display: none;">
+    <div class="selectOption">
         <section id="opp1">
             <p>Traditional Tick-Tack-Toe with 3&nbsp;matches.</p>
         </section>
@@ -42,8 +42,27 @@
     </div>
 
     <!-- Game over display tabe -->
-     <div class="gameOver">
+     <div class="gameOver" style="display: none;">
+        <h1>GAME OVER!!</h1>
         
+        <table>
+            <tr>
+                <td>Bot</td>
+                <td>VS</td>
+                <td>Player</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>:</td>
+                <td>3</td>
+            </tr>
+        </table>
+
+        <h2>Victory/Defeat</h2>
+
+        <section id="mainMenuBtn">
+            <p>Main Menu</p>
+        </section>
      </div>
 
     <script src="../JScript/GameScript.js"></script>
