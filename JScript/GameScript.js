@@ -145,6 +145,8 @@ function GameLoop(selectedBox) {
     // Removing the past blocks in the gametype of 2
     if (gameType == 0) {
         if ((usedBoxes.length > 7) && (!win)) {
+            //console.log("Wolf");
+            
             for (let i = 0; i < 2; i++) {
                 let firstUsedBlock = usedBoxes[0];
                 usedBoxes = usedBoxes.filter(box => box !== firstUsedBlock);                 // Removing the block from the list
@@ -209,6 +211,7 @@ opp1.addEventListener('click', () => {
         element.style.display = 'block';
         win = false;
         avalebleBoxes = [b1, b2, b3, b4, b5, b6, b7, b8, b9];
+        usedBoxes = [];
         for (let i = 0; i < boxes.length; i++) {
             boxes[i].innerHTML = '';
             boxes[i].style.color = "white";
@@ -228,6 +231,7 @@ opp2.addEventListener('click', () => {
         element.style.display = 'block';
         win = false;
         avalebleBoxes = [b1, b2, b3, b4, b5, b6, b7, b8, b9];
+        usedBoxes = [];
         for (let i = 0; i < boxes.length; i++) {
             boxes[i].innerHTML = '';
             boxes[i].style.color = "white";
