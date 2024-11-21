@@ -125,11 +125,73 @@ function PrintMove(moveBlock, symbole) {
 
 
 // Bot move selection
+function randomMoveFromChoices(choices) {
+    let userbalChoices = choices.filter(element => avalebleBoxes.includes(element));
+    let randomIndex = Math.floor(Math.random() * userbalChoices.length);
+    PrintMove(userbalChoices[randomIndex], 'O');
+}
+
+
 function BotMove(avalebleChoice) {
-    let randomIndex = Math.floor(Math.random() * avalebleChoice.length);
-    PrintMove(avalebleChoice[randomIndex], 'O');
-    // console.log(avalebleChoice[randomIndex]);
-    // To Be Continued!!
+    // Using offencive methods 1
+    if ((((b1.innerHTML == "O") && (b2.innerHTML == "O")) || ((b1.innerHTML == "O") && (b3.innerHTML == "O")) || ((b2.innerHTML == "O") && (b3.innerHTML == "O"))) && ((b1.innerHTML.trim() == "") || (b2.innerHTML.trim() == "") || (b3.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b1, b2, b3];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b4.innerHTML == "O") && (b5.innerHTML == "O")) || ((b4.innerHTML == "O") && (b6.innerHTML == "O")) || ((b5.innerHTML == "O") && (b6.innerHTML == "O"))) && ((b4.innerHTML.trim() == "") || (b5.innerHTML.trim() == "") || (b6.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b4, b5, b6];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b7.innerHTML == "O") && (b8.innerHTML == "O")) || ((b7.innerHTML == "O") && (b9.innerHTML == "O")) || ((b8.innerHTML == "O") && (b9.innerHTML == "O"))) && ((b7.innerHTML.trim() == "") || (b8.innerHTML.trim() == "") || (b9.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b7, b8, b9];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b1.innerHTML == "O") && (b4.innerHTML == "O")) || ((b1.innerHTML == "O") && (b7.innerHTML == "O")) || ((b4.innerHTML == "O") && (b7.innerHTML == "O"))) && ((b1.innerHTML.trim() == "") || (b4.innerHTML.trim() == "") || (b7.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b1, b4, b7];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b2.innerHTML == "O") && (b5.innerHTML == "O")) || ((b2.innerHTML == "O") && (b8.innerHTML == "O")) || ((b5.innerHTML == "O") && (b8.innerHTML == "O"))) && ((b2.innerHTML.trim() == "") || (b5.innerHTML.trim() == "") || (b8.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b2, b5, b8];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b3.innerHTML == "O") && (b6.innerHTML == "O")) || ((b3.innerHTML == "O") && (b9.innerHTML == "O")) || ((b6.innerHTML == "O") && (b9.innerHTML == "O"))) && ((b3.innerHTML.trim() == "") || (b6.innerHTML.trim() == "") || (b9.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b3, b6, b9];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b1.innerHTML == "O") && (b5.innerHTML == "O")) || ((b1.innerHTML == "O") && (b9.innerHTML == "O")) || ((b5.innerHTML == "O") && (b9.innerHTML == "O"))) && ((b1.innerHTML.trim() == "") || (b5.innerHTML.trim() == "") || (b9.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b1, b5, b9];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b3.innerHTML == "O") && (b5.innerHTML == "O")) || ((b3.innerHTML == "O") && (b7.innerHTML == "O")) || ((b5.innerHTML == "O") && (b7.innerHTML == "O"))) && ((b3.innerHTML.trim() == "") || (b5.innerHTML.trim() == "") || (b7.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b3, b5, b7];
+        randomMoveFromChoices(botMovementChoices);
+    }
+
+    // Using defencive methods 2
+    else if ((((b1.innerHTML == "X") && (b2.innerHTML == "X")) || ((b1.innerHTML == "X") && (b3.innerHTML == "X")) || ((b2.innerHTML == "X") && (b3.innerHTML == "X"))) && ((b1.innerHTML.trim() == "") || (b2.innerHTML.trim() == "") || (b3.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b1, b2, b3];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b4.innerHTML == "X") && (b5.innerHTML == "X")) || ((b4.innerHTML == "X") && (b6.innerHTML == "X")) || ((b5.innerHTML == "X") && (b6.innerHTML == "X"))) && ((b4.innerHTML.trim() == "") || (b5.innerHTML.trim() == "") || (b6.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b4, b5, b6];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b7.innerHTML == "X") && (b8.innerHTML == "X")) || ((b7.innerHTML == "X") && (b9.innerHTML == "X")) || ((b8.innerHTML == "X") && (b9.innerHTML == "X"))) && ((b7.innerHTML.trim() == "") || (b8.innerHTML.trim() == "") || (b9.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b7, b8, b9];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b1.innerHTML == "X") && (b4.innerHTML == "X")) || ((b1.innerHTML == "X") && (b7.innerHTML == "X")) || ((b4.innerHTML == "X") && (b7.innerHTML == "X"))) && ((b1.innerHTML.trim() == "") || (b4.innerHTML.trim() == "") || (b7.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b1, b4, b7];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b2.innerHTML == "X") && (b5.innerHTML == "X")) || ((b2.innerHTML == "X") && (b8.innerHTML == "X")) || ((b5.innerHTML == "X") && (b8.innerHTML == "X"))) && ((b2.innerHTML.trim() == "") || (b5.innerHTML.trim() == "") || (b8.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b2, b5, b8];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b3.innerHTML == "X") && (b6.innerHTML == "X")) || ((b3.innerHTML == "X") && (b9.innerHTML == "X")) || ((b6.innerHTML == "X") && (b9.innerHTML == "X"))) && ((b3.innerHTML.trim() == "") || (b6.innerHTML.trim() == "") || (b9.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b3, b6, b9];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b1.innerHTML == "X") && (b5.innerHTML == "X")) || ((b1.innerHTML == "X") && (b9.innerHTML == "X")) || ((b5.innerHTML == "X") && (b9.innerHTML == "X"))) && ((b1.innerHTML.trim() == "") || (b5.innerHTML.trim() == "") || (b9.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b1, b5, b9];
+        randomMoveFromChoices(botMovementChoices);
+    } else if ((((b3.innerHTML == "X") && (b5.innerHTML == "X")) || ((b3.innerHTML == "X") && (b7.innerHTML == "X")) || ((b5.innerHTML == "X") && (b7.innerHTML == "X"))) && ((b3.innerHTML.trim() == "") || (b5.innerHTML.trim() == "") || (b7.innerHTML.trim() == ""))) {
+        let botMovementChoices = [b3, b5, b7];
+        randomMoveFromChoices(botMovementChoices);
+    }
+
+    // if none methods 3
+    else {
+        let randomIndex = Math.floor(Math.random() * avalebleChoice.length);
+        PrintMove(avalebleChoice[randomIndex], 'O');        
+    }
 }
 
 
@@ -146,7 +208,7 @@ function GameLoop(selectedBox) {
     if (gameType == 0) {
         if ((usedBoxes.length > 7) && (!win)) {
             //console.log("Wolf");
-            
+
             for (let i = 0; i < 2; i++) {
                 let firstUsedBlock = usedBoxes[0];
                 usedBoxes = usedBoxes.filter(box => box !== firstUsedBlock);                 // Removing the block from the list

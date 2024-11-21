@@ -16,7 +16,7 @@ body {
     background-size: 200% 200%;
     animation: backgroundEffect 10s ease infinite;
     
-    background-color: #7d0101;
+    background-color: #510000;
 }
 
 @keyframes backgroundEffect {
