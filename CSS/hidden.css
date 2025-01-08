@@ -53,6 +53,6 @@ body {
 @media screen and (max-width: 600px) {
     .boxes {
         width: 80%;
-        background-color: red;
+        /* background-color: red; */
     }
 }
