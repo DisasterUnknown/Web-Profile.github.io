@@ -49,3 +49,9 @@ body {
     background-color: rgb(14, 14, 14);
     transform: scale(1.01);
 }
+
+@media screen and (max-width: 600px) {
+    .boxes {
+        width: 80%;
+    }
+}
