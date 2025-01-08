@@ -45,8 +45,9 @@ function changeNumber(num) {
     const num4 = document.getElementById('num4').textContent;
 
     if (num1 == '2' && num2 == '0' && num3 == '0' && num4 == '6') {
-        console.log("world");
         window.alert("Your device has been Hacked!!");
+    } else if (num1 == '1' && num2 == '0' && num3 == '2' && num4 == '4') {
+        window.location.href = "./HTML/hidden.html";
     }
 }
 
