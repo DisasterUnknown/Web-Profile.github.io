@@ -54,6 +54,8 @@ body {
 @media screen and (max-width: 600px) {
     .boxes {
         width: 82%;
+        padding-left: 15px;
+        padding-right: 15px;
         /* background-color: red; */
     }
 }
