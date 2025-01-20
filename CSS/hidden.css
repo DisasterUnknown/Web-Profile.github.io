@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    margin-bottom: 10px !important;
     padding: 0;
     height: 100%;
     color: white;
@@ -52,7 +53,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .boxes {
-        width: 80%;
+        width: 82%;
         /* background-color: red; */
     }
 }
