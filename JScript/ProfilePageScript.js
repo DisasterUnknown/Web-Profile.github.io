@@ -27,6 +27,23 @@ vBtn.addEventListener('click', () => {
 
 
 
+
+// Display the alert Msg
+function showAlert(message) {
+    const alertContainer = document.getElementById('customAlert');
+    const alertMessage = document.getElementById('alertMessage');
+
+    alertMessage.textContent = message; // Set custom message
+    alertContainer.style.display = 'flex'; // Show alert
+}
+
+document.getElementById('closeAlert').addEventListener('click', () => {
+    const alertContainer = document.getElementById('customAlert');
+    alertContainer.style.display = 'none'; // Hide alert on button click
+});
+
+
+
 // Changing the numbers in the number click area
 const num1 = document.getElementById('num1');
 const num2 = document.getElementById('num2');
@@ -45,7 +62,7 @@ function changeNumber(num) {
     const num4 = document.getElementById('num4').textContent;
 
     if (num1 == '2' && num2 == '0' && num3 == '0' && num4 == '6') {
-        window.alert("Your device has been Hacked!!");
+        showAlert('Your device has been Hacked!!');
     } else if (num1 == '1' && num2 == '0' && num3 == '2' && num4 == '4') {
         window.location.href = "./HTML/hidden.html";
     }
