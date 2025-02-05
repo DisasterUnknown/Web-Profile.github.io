@@ -1,7 +1,10 @@
+// Detect if the device supports touch
+const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
 // Create and append canvas to the document
 const canvas = document.createElement("canvas");
-document.body.appendChild(canvas);
 const ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
 
 // Set canvas size
 const resizeCanvas = () => {
@@ -67,11 +70,19 @@ const updateParticles = () => {
     requestAnimationFrame(updateParticles);
 };
 
-// Track mouse movement
-window.addEventListener("mousemove", (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-});
+// Track input movement
+if (isTouchDevice) {
+    window.addEventListener("touchmove", (e) => {
+        const touch = e.touches[0]; // Get the first touch point
+        mouse.x = touch.clientX;
+        mouse.y = touch.clientY;
+    });
+} else {
+    window.addEventListener("mousemove", (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
+}
 
 // Handle resize
 window.addEventListener("resize", () => {
