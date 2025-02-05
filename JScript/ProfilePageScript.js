@@ -81,9 +81,9 @@ num4.addEventListener('click', () => { changeNumber(num4) })
 //     window.alert("Coming Soon!!");
 // })
 
-document.getElementById('sec2').addEventListener('click', () => {
-    window.alert("Coming Soon!!");
-})
+// document.getElementById('sec2').addEventListener('click', () => {
+//     window.alert("Coming Soon!!");
+// })
 
 document.getElementById('sec3').addEventListener('click', () => {
     window.alert("Coming Soon!!");
