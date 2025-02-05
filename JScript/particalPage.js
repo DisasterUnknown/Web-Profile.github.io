@@ -14,7 +14,7 @@ const resizeCanvas = () => {
 resizeCanvas();
 
 // Mouse properties
-const mouse = { x: 0, y: 0, radius: 5000 };
+const mouse = { x: 0, y: 0, radius: 2500 };
 
 // Store particles
 const particles = [];
@@ -50,8 +50,8 @@ const updateParticles = () => {
         if (distance < mouse.radius) {
             const angle = Math.atan2(dy, dx);
             const force = (-mouse.radius / distance) * 3;
-            p.vx += force * Math.cos(angle) * 5;
-            p.vy += force * Math.sin(angle) * 5;
+            p.vx += force * Math.cos(angle) || 5;
+            p.vy += force * Math.sin(angle) || 5;
         }
 
         // Apply friction
@@ -59,8 +59,8 @@ const updateParticles = () => {
         p.vy *= 0.99;
 
         // Move particle and ease back to original position
-        p.x += p.vx + (p.originX - p.x) * 0.9;
-        p.y += p.vy + (p.originY - p.y) * 0.9;
+        p.x += p.vx + (p.originX - p.x) * 0.3;
+        p.y += p.vy + (p.originY - p.y) * 0.3;
 
         // Draw particle
         ctx.fillStyle = "white";
