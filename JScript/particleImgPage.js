@@ -103,7 +103,7 @@ function Main(GAP) {
             this.ratioHeight = this.h / this.imgRatio;
 
 
-            this.imagesWidth = width > 600 ? width / 3 : ((width / 10) * 9);
+            this.imagesWidth = this.width > 600 ? this.width / 3 : ((this.width / 10) * 9);
             this.tempImageHeight = ((this.imagesWidth / this.ratioWidth) * this.ratioHeight);            
             this.imagesHeight = this.tempImageHeight < this.height ? this.tempImageHeight : (this.tempImageHeight - ((this.tempImageHeight - this.height) + 100));
 
@@ -114,7 +114,7 @@ function Main(GAP) {
             this.centerY = (this.height * 0.5);
 
             this.x = this.centerX - this.image.width * 0.5;
-            this.y = this.centerY - this.image.height * 0.5;
+            this.y = this.width > 600 ? (this.centerY - this.image.height * 0.5) : (this.centerY - this.image.height * 0.6);
 
             this.gap = GAP;
 
