@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: none;
+}
+
+#canvas1 {
+    background: black;
+    position: absolute;
+}
+
+button:hover, #actFileIn:hover, #gapValueIn:hover {
+    animation: 0.5s;
+    background-color: rgba(255, 255, 255, 0.136) !important;
+}
+
+.controls {
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    button {
+        color: white;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 0.3rem 1rem;
+        font-size: 1rem;
+        z-index: 100;
+        cursor: pointer;
+    }
+}
+
+
+.inputControles {
+    position: relative;
+    height: calc(100svh - 60px);
+    display: flex;
+    z-index: 100;
+
+    .leftSection, .rightSection {
+        position: absolute;
+        bottom: 1.5rem;
+    }
+
+    .leftSection {
+        display: flex;
+        left: 2rem;
+
+        #getFileIn {
+            display: none;
+        }
+    }
+
+    .rightSection {
+        right: 2rem;
+        display: flex;
+
+        #gapValueIn {
+            width: 60px;
+        }
+    }
+
+    #actFileIn, #applyImg, #gapValueIn,
+    #applyGap, #clrStorage {
+        display: block;
+        color: white;
+        border-radius: 5px;
+        border: 1px solid white;
+        font-size: 1rem;
+        padding: 0.3rem 0.7rem;
+        margin: 0.3rem;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #actFileIn {
+        margin-right: 0px !important;
+        border-radius: 5px 0px 0px 5px !important;
+    }
+    #applyImg {
+        margin-left: 0px !important;
+        border-radius: 0px 5px 5px 0px !important;
+    }
+
+    #gapValueIn {
+        margin-right: 0px !important;
+        border-radius: 5px 0px 0px 5px !important;
+    }
+    #applyGap {
+        margin-left: 0px !important;
+        border-radius: 0px 5px 5px 0px !important;
+    }
+}
+
+
+@media screen and (max-width: 584px) {
+    .inputControles {
+        flex-direction: column;
+        align-items: center;
+        /* height: 60px; */
+        position: absolute;
+        bottom: 1rem;
+        width: calc(100% - 2rem);
+        left: 1rem;
+        right: 1rem;
+    }
+
+    .leftSection, .rightSection {
+        position: static;
+        display: flex;
+        flex-direction: row; /* Keep items in a row */
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 0.9rem; /* Add spacing between rows */
+    }
+
+    #actFileIn, #applyImg, #gapValueIn, #applyGap, #clrStorage {
+        width: 100%;
+        text-align: center;
+    }   
+    
+    .leftSection {
+        left: unset !important;
+    }
+
+    .rightSection {
+        right: unset !important;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        bottom: 0rem !important;
+    }
+}
+
+
+
+

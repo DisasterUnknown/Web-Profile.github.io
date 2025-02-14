@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img to Partical</title>
+    <link rel="stylesheet" href="../CSS/particleImgPage.css">
+</head>
+
+<body>
+    <canvas id="canvas1"></canvas>
+    <div>
+        <img id="image1" src="">
+    </div>
+
+    <div class="controls">
+        <button id="backBtn">
+            <a href="../index.html">Back</a>
+        </button>
+
+        <button id="warpBtn">Warp</button>
+    </div>
+
+    <div class="inputControles">
+        <div class="leftSection">
+            <input type="file" accept="image/*" id="getFileIn">
+            <label for="getFileIn" id="actFileIn">Choose File</label>
+            <button id="applyImg">Apply</button>
+        </div>
+        <div class="rightSection">
+            <input type="number" placeholder="Ratio" id="gapValueIn">
+            <button id="applyGap">Apply</button>
+            <button id="clrStorage">Clear&nbsp;Local&nbsp;Storage</button>
+        </div>
+    </div>
+
+    <script src="../JScript/particleImgPage.js"></script>
+    <script src="../JScript/controleBtns.js"></script>
+</body>
+
+</html>

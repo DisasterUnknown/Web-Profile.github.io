@@ -1,5 +1,5 @@
 // Detect if the device supports touch
-const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
 
 // Create and append canvas to the document
 const canvas = document.createElement("canvas");
