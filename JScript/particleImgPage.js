@@ -194,7 +194,9 @@ window.addEventListener('resize', () => {
 
 // Changing the pixel ratio
 let ratioIn = document.getElementById('gapValueIn');
-document.getElementById('applyGap').addEventListener('click', () => {
+document.getElementById('applyGap').addEventListener('click', (event) => {
+    event.preventDefault();
+
     let value = parseInt(ratioIn.value, 10) || 2;
     Main(value);
 });
