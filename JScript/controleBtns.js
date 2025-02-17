@@ -29,7 +29,6 @@ function readImg(event) {
 ImgIn.addEventListener('change', readImg);
 // Add local storage
 ImgApplyBtn.addEventListener('click', () => {
-    console.log(base64Data);
     if (base64Data) {
         base64Data = JSON.stringify(base64Data);
         sessionStorage.setItem('imageBase64', base64Data);
@@ -42,5 +41,6 @@ ImgApplyBtn.addEventListener('click', () => {
 // Clear local storage
 ClearStorage.addEventListener('click', () => {
     sessionStorage.removeItem('imageBase64');
+    sessionStorage.removeItem('pixleGapValue');
     window.location.reload();
 });

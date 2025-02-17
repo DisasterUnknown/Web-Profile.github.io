@@ -6,28 +6,43 @@ window.onload = () => {
         .then(data => addimg(data))
 }
 
+// adding Img's and pixel data from the session storage
 function addimg(data) {
     const img = document.getElementById('image1');
-    let localData;
+    let imgData;
+    let pixleData;
 
     try {
-        localData = sessionStorage.getItem('imageBase64');
-        localData = JSON.parse(localData);
+        imgData = sessionStorage.getItem('imageBase64');
+        imgData = JSON.parse(imgData);
     } catch {
-        console.log("No Local data found!!");
+        console.log("No session data found!!");
     }
 
-    if (localData) {
-        img.src = localData;
+    if (imgData) {
+        img.src = imgData;
     } else {
         img.src = data;
     }
 
     img.onload = function () {
-        Main(2);
+        try {
+            pixleData = sessionStorage.getItem('pixleGapValue');
+            pixleData = JSON.parse(pixleData);
+        } catch {
+            console.log("No session data found!!");            
+        }
+
+        if (pixleData) {
+            Main(pixleData);
+        } else {
+            Main(2);
+        }
     }
 }
 
+
+// Page Main logic
 function Main(GAP) {
     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
@@ -213,6 +228,12 @@ document.getElementById('applyGap').addEventListener('click', (event) => {
 
     let value = parseInt(ratioIn.value, 10) || 2;
     Main(value);
+
+    if (value) {
+        value = JSON.stringify(value);
+        sessionStorage.setItem('pixleGapValue', value);
+    }
+
 });
 
 document.getElementById('gapValueIn').addEventListener('input', () => {
