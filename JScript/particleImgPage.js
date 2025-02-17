@@ -104,7 +104,7 @@ function Main(GAP) {
 
 
             this.imagesWidth = this.width > 600 ? this.width / 3 : ((this.width / 10) * 9);
-            this.tempImageHeight = ((this.imagesWidth / this.ratioWidth) * this.ratioHeight);            
+            this.tempImageHeight = ((this.imagesWidth / this.ratioWidth) * this.ratioHeight);
             this.imagesHeight = this.tempImageHeight < this.height ? this.tempImageHeight : (this.tempImageHeight - ((this.tempImageHeight - this.height) + 100));
 
             this.image.width = this.imagesWidth;
@@ -186,8 +186,22 @@ function Main(GAP) {
 }
 
 
+// Checking if it's a mobile device
 window.addEventListener('resize', () => {
-    location.reload();
+    function isMobileDevice() {
+        if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // Resizing the page if it is not mobile device
+    if (!isMobileDevice()) {
+        window.addEventListener('resize', () => {
+            location.reload();
+        });
+    }
 });
 
 
