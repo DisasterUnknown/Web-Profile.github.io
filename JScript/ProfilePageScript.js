@@ -90,5 +90,9 @@ num4.addEventListener('click', () => { changeNumber(num4) })
 // })
 
 document.getElementById('sec4').addEventListener('click', () => {
-    window.alert("Coming Soon!!");
+    if (window.confirm("The application currently contains several bugs and errors, and it does not support mobile devices at this time. Do you still want to proceed? Click 'Yes' to continue or 'Cancel' to exit.")) {
+        window.location = '/Resources/GoDotGame/index.html';
+    } else {
+        console.log("User said No.");
+    }
 })
